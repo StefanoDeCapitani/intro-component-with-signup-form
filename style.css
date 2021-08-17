@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*============================
+Table of contents:
+A: Mobile
+  1. Global Styles
+  2. Typography
+  3. Layout
+  4. Components
+    !! INPUT ERROR MESSAGE !!
+
+B: max-width: 320px
+  2. Typography
+  4. Components
+
+C: min-width: 900px
+  1. Global Styles
+  2. Typography
+  3. Layout
+  4. Components
+    !! INPUT ERROR MESSAGE !!
+============================*/
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        A: Mobile
+>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/*------------ 1. Global Styles ------------*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /*Primary*/
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  /*Accent*/
+  --blue: hsl(248, 32%, 49%);
+  /*Neutral*/
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+  /*Font family*/
+  --ff: 'Poppins', sans-serif;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  padding: 5rem 0;
+
+  background-color: var(--red);
+  background-image: url("images/bg-intro-mobile.png");
+  background-size: cover;
+
+  font-family: var(--ff);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*------------ 2. Typography ------------*/
+h1, p, button {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.7rem;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+}
+
+.text p {
+  margin: 1rem 0 3rem;
+}
+
+form p {
+  margin-top: 0.5rem;
+  width: 38ch;
+
+  font-size: 0.7rem;
+  line-height: 1rem;
+  color: var(--grayish-blue);
+}
+
+form a {
+  color: var(--red);
+}
+
+footer p {
+  font-size: 0.7rem;
+  width: auto;
+  padding: 0 1rem;
+}
+
+.attribution a {
+  color: var(--blue);
+}
+
+/*------------ 3. Layout ------------*/
+main {
+  max-width: 85vw;
+}
+
+footer {
+  position: absolute;
+  bottom: 5px;
+}
+
+/*------------ 4. Components ------------*/
+button, input {
+  width: 100%;
+  border: none;
+  font-family: var(--ff);
+}
+
+button {
+  color: white;
+}
+
+form div, .btn_submit {
+  height: 3rem;
+  border-radius: 0.3rem;
+}
+
+form, .btn_free_trial {
+  border-radius: 0.6rem;
+  box-shadow: 0 0.5rem 0 hsla(249, 10%, 26%, 0.3);
+}
+
+.btn_free_trial {
+  height: 4.5rem;
+  padding: 0 3rem;
+
+  font-size: 1rem;
+  line-height: 1.2rem;
+  background: var(--blue);
+}
+
+form {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  height: 100%;
+  padding-left: 1rem;
+
+  border-radius: 0.3rem;
+  caret-color: var(--blue);
+  font-weight: 600;
+}
+
+input:focus {
+  outline-color: var(--blue);
+  outline-width: 1px;
+}
+
+.btn_submit {
+  background: var(--green);
+  border-bottom: 4px solid #31b97f;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+form div {
+  position: relative;
+  width: 100%;
+  margin: 0 0 1rem;
+
+  border: 1px solid var(--grayish-blue);
+  font-size: 1rem;
+}
+
+
+/* !! INPUT ERROR MESSAGE !! */
+
+form div.invalid {
+  margin: 0 0 2rem;
+  border: 2px solid var(--red);
+}
+
+.invalid::before {
+  position: absolute;
+  top: 0.7rem;
+  right: 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  content: "";
+  background-image: url("images/icon-error.svg");
+  background-size: contain;
+}
+
+.invalid::after {
+  position: absolute;
+  right: 0;
+  bottom: -1.3rem;
+  content: "";
+  font-size: 0.7rem;
+  color: var(--red);
+}
+
+form div:nth-of-type(1).invalid::after {
+  content: "First Name cannot be empty";
+}
+
+form div:nth-of-type(2).invalid::after {
+  content: "Last Name cannot be empty";
+}
+
+form div:nth-of-type(3).invalid::after {
+  content: "Looks like this is not an email";
+}
+
+form div:nth-of-type(4).invalid::after {
+  content: "Password cannot be empty";
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      B: max-width: 320px
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media screen and (max-width: 320px) {
+
+  /*------------- 2. Typography -------------*/
+  form p {
+    width: auto;
+  }
+
+  /*------------- 4. Components -------------*/
+  .btn_submit, .btn_free_trial {
+    padding: 1rem 1rem;
+    height: auto;
+  }
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      C: min-width: 900px
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media screen and (min-width: 900px) {
+
+  /*------------- 1. Global Style -------------*/
+  body {
+    padding: 0;
+    background-image: url("images/bg-intro-desktop.png");
+    background-size: cover;
+  }
+
+  /*------------- 2. Typography -------------*/
+  h1, .text p {
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 2.9rem;
+    width: 38vw;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 2rem;
+    width: 38vw;
+  }
+
+  .text p {
+    margin-bottom: 0;
+  }
+
+  /*------------- 3. Layout -------------*/
+  main {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .text {
+    flex-basis: 50%;
+  }
+
+  .button_and_form {
+    flex-basis: 50%;
+  }
+
+  form p {
+    margin-top: 0;
+    width: auto;
+  }
+
+  input:placeholder {
+    font-size: 1rem;
+  }
+
+  /*------------- 4. Components -------------*/
+  .btn_free_trial {
+    width: 38vw;
+    padding: 1rem 4rem;
+  }
+
+  form {
+    width: 38vw;
+    padding: 2.5rem;
+  }
+
+  form div, .btn_submit {
+    height: 3.3rem;
+  }
+
+  form div {
+    margin: 0 0 1.9rem;
+  }
+
+  input {
+    height: 100%;
+  }
+
+  .btn_submit {
+    margin-bottom: 0.7rem;
+  }
+
+  .btn_submit:hover {
+    background: #77e2b4;
+    border-bottom: 4px solid var(--green);
+    cursor: pointer;
+  }
+
+  /* !! INPUT ERROR MESSAGE !! */
+  form div.invalid {
+    position: relative;
+    margin: 0 0 2.2rem;
+    font-size: 1rem;
+  }
+
+}
