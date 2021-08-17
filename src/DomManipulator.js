@@ -10,13 +10,11 @@ class DomManipulator {
     }
   }
 
-  static errorSuppression = function(e) {
-    var element = e.srcElement;
+  static errorSuppression = function(element) {
     element.parentNode.classList.remove("invalid");
   }
 
-  static clearEntries = function(form) {
-    var elements = Array.from(form);
+  static clearEntries = function(elements) {
     for (let element of elements) {
         element.value = "";
     }

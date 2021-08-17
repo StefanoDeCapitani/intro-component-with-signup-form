@@ -11,11 +11,25 @@ class EntriesManager {
     this.manageEntries(elements);
   }
 
-  manageEntries = (entries) => {
-    this.invalidEntries = Validator.getInvalidEntries(entries);
+  manageEntries = (elements) => {
+    this.invalidEntries = this.getInvalidEntries(elements);
     if (this.areAllEntriesValid()) {
-      this.validEntries = entries.map(element => element.value);
+      this.validEntries = elements.map(element => element.value);
     }
+  }
+
+  getInvalidEntries = function(formElements) {
+    let elements = [];
+    if (!(form === undefined)) {
+      elements = formElements;
+    }
+    let invalidEntries = [];
+    for (let element of elements) {
+        if (Validator.isElementInvalid(element)) {
+          invalidEntries.push(element);
+        }
+    }
+    return invalidEntries;
   }
 
   areAllEntriesValid = () => {

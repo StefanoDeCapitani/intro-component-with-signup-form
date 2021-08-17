@@ -27,5 +27,5 @@ form.addEventListener("submit", function(e) {
 /*ON INTPUT: 4. Removes any error message on the input field where the user is typing.*/
 form.addEventListener("input",  function(e){
   e.preventDefault();
-  DomManipulator.errorSuppression(e);
+  DomManipulator.errorSuppression(e.srcElement);
 });

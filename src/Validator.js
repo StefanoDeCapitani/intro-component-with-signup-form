@@ -2,20 +2,6 @@ class Validator {
 
   static EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-  static getInvalidEntries = function(form) {
-    let elements = [];
-    if (!(form === undefined)) {
-      elements = form;
-    }
-    let invalidEntries = [];
-    for (let element of elements) {
-        if (Validator.isElementInvalid(element)) {
-          invalidEntries.push(element);
-        }
-    }
-    return invalidEntries;
-  }
-
   static isElementInvalid = function(element) {
     let isInvalid = false;
     if (element.name === "email") {
