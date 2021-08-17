@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/intro-component-with-sign-up-form-html-css-js-ovZw0xpQZ](https://www.frontendmentor.io/solutions/intro-component-with-sign-up-form-html-css-js-ovZw0xpQZ)
+- Live Site URL: [https://stefanodecapitani.github.io/intro-component-with-signup-form/](https://stefanodecapitani.github.io/intro-component-with-signup-form/)
 
 ## My process
 
@@ -54,4 +54,4 @@ I also would like to get better at naming variables, functions ecc... English is
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@StefanoDeCapitani](https://www.frontendmentor.io/profile/StefanoDeCapitani)
